@@ -1,4 +1,4 @@
-# CovidTrakcerDemo
+# CovidTrackerDemo
 
 This is an extract of the my NodeJS based web application, the repo that it was originally located in contains content that is irrelevant to this project. 
 
