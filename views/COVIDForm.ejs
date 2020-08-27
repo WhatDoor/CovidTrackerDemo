@@ -1,0 +1,58 @@
+<%- include('includes/head.ejs') %>
+</head>
+
+<body>
+    <main>
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-4">CAACC English Sunday Service Reservation (<%=date%>)</h1>
+                <p class="lead">Number of Seats Remaining: <%=seats%></p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <form action="/CAACC/submit" method="POST">
+                    <div class="form-group">
+                        <label for="Name">Name:</label>
+                        <input class="form-control" type="text" id="name" name="name" required maxlength="100" autofocus>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Total seats Attendees">Total seats reserving:</label>
+                        <select class="form-control" name="num_attendees" id="num_attendees">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Contact Number">Contact Number:</label>
+                        <input class="form-control" type="text" id="contact_num" name="contact_num" required pattern="[0-9]{10}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Email">Email (optional):</label>
+                        <input class="form-control" type="email" id="email" name="email" maxlength="100">
+                        <small class="form-text text-muted">You will receive an email notification if you provide this</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Other persons">Other persons in this reservation (please separate each person with commas):</label>
+                        <input class="form-control" type="text" id="other_persons" name="other_persons" maxlength="255">
+                        <small class="form-text text-muted">Preferably, these people are also within the same household. You must be able to contact these persons on request, otherwise, please make a separate reservation.</small>
+                    </div>
+                    
+                    <div class="row justify-content-center">
+                        <input type="submit" class="btn btn-primary col-5" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+<%- include('includes/end.ejs') %>

@@ -1,0 +1,64 @@
+<%- include('includes/head.ejs') %>
+</head>
+
+<body>
+    <main>
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-4">Thanks for registering, see you at church!</h1>
+                <p class="lead">Here is a summary of your reservation this Sunday (<%=date%>)</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <H4>Name: </H4>
+                </div>
+                <div class="col-sm">
+                    <H4><%=name%></H4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <H4>Total Number of Seats:</H4>
+                </div>
+                <div class="col-sm">
+                    <H4><%=seats_reserved%></H4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <H4>Contact Number: </H4>
+                </div>
+                <div class="col-sm">
+                    <H4><%=contact_num%></H4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <H4>Email: </H4>
+                </div>
+                <div class="col-sm">
+                    <H4><%=email%></H4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <H4>Other Persons: </H4>
+                </div>
+                <div class="col-sm">
+                    <H4><%=other_persons%></H4>
+                </div>
+            </div>
+            
+            <div class="row justify-content-end">
+                <a class="btn btn-primary" href="/CAACC" role="button">Make Another Reservation</a>
+            </div>
+        </div>
+    </main>
+<%- include('includes/end.ejs') %>
